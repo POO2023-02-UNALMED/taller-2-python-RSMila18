@@ -26,14 +26,16 @@ class Motor:
 
 class Auto:
 
-    def __init__(self, modelo, marca, registro):
+    def __init__(self, modelo, precio, asientos, marca, motor, registro):
         self.modelo = modelo
-        motor = Motor(self)
-        self.motor = motor
-        self.marca = marca
-        self.registro = registro
+        self.precio = precio
+        asientos = asientos
         asientos = [Asiento(self)]
-        self.asientos = asientos
+        self.marca = marca
+        motor = motor
+        motor = Motor(self)
+        self.registro = registro
+        
     
     @staticmethod
     def cantidadCreados(cantidadCreados):
