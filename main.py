@@ -47,12 +47,13 @@ class Auto:
         return count
     
     def verificarIntegridad(self):
-        for i in self.Asiento:
-            if i != None:
-                if Asiento.registro == (Auto.registro and Motor.registro):
-                 return "Auto original"
-            else:
-                return "Las piezas del auto no son originales"
+        if self.registro == Motor.registro:
+            for i in self.Asiento:
+                if i != None and i.registro != self.registro:
+                    return "Las piezas no son originales"
+            return "Auto Original"
+        else:
+            return "Las piezas no son originales"
 
 
 
