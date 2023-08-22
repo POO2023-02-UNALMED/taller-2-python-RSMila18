@@ -39,8 +39,8 @@ class Auto:
 
     def cantidadAsientos(self):
         count = 0
-        for i in self.asiento:
-            if i != None:
+        if self.asiento != 0:
+            for i in self.ansiento:
                 count += 1
         return count
     
