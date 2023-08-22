@@ -25,22 +25,17 @@ class Motor:
             self.tipo = str(nuevoTipo)
 
 class Auto:
+    
+    cantidadCreados = 0
 
     def __init__(self, modelo, precio, asientos, marca, motor, registro):
         self.modelo = modelo
         self.precio = precio
-        asientos = asientos
-        asientos = [Asiento(self)]
+        Asiento = asientos
         self.marca = marca
-        motor = motor
-        motor = Motor(self)
+        Motor = motor
         self.registro = registro
         
-    
-    @staticmethod
-    def cantidadCreados(cantidadCreados):
-        cantidadCreados= 0
-        return cantidadCreados
 
     def cantidadAsientos(self):
         count = 0
