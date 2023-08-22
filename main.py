@@ -31,23 +31,22 @@ class Auto:
     def __init__(self, modelo, precio, asientos, marca, motor, registro):
         self.modelo = modelo
         self.precio = precio
-        self.Asiento = asientos
+        self.asiento = asientos
         self.marca = marca
-        self.Motor = motor
+        self.motor = motor
         self.registro = registro
         
 
     def cantidadAsientos(self):
         count = 0
-    
-        for i in self.Asiento:
+        for i in self.asiento:
             if i != None:
                 count += 1
         return count
     
     def verificarIntegridad(self):
         if self.registro == Motor(self).registro:
-            for i in self.Asiento:
+            for i in self.asiento:
                 if i != None and i.registro != self.registro:
                     return "Las piezas no son originales"
             return "Auto Original"
