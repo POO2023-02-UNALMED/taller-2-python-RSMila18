@@ -40,10 +40,9 @@ class Auto:
     def cantidadAsientos(self):
         count = 0
     
-        for i in Asiento(self):
+        for i in self.Asiento:
             if i != None:
-                count =+ 1
-            
+                count += 1
         return count
     
     def verificarIntegridad(self):
